@@ -301,6 +301,9 @@ header {
         p {
           font-size: 1rem;
         }
+        .button {
+          margin-inline: auto;
+        }
       }
       @media (v.$min-small) and (v.$max-medium) {
         h1 {
@@ -1232,7 +1235,11 @@ footer {
         }
       }
       &::after {
-        background-image: linear-gradient(to right, c.$clr-primary 30%, c.$clr-secondry 70%);
+        background-image: linear-gradient(
+          to right,
+          c.$clr-primary 30%,
+          c.$clr-secondry 70%
+        );
       }
     }
   }

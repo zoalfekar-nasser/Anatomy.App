@@ -3,14 +3,12 @@
 *::before {
   box-sizing: border-box;
 }
-@media (max-width: 576px) {
-  *,
-*::after,
-*::before {
-    outline-offset: none;
+
+@media (max-width: 767px) {
+  *:focus {
+    outline: none;
   }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -498,6 +496,9 @@ header .content > i:hover {
   }
   .landing .content .text-box p {
     font-size: 1rem;
+  }
+  .landing .content .text-box .button {
+    margin-inline: auto;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {

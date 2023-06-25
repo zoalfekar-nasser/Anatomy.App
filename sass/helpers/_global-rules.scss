@@ -1,11 +1,13 @@
 @use "colors" as c;
-
+@use "variables" as v;
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-  @media (max-width: 576px) {
-    outline-offset: none;
+}
+@media (v.$max-small) {
+  *:focus {
+    outline: none;
   }
 }
 
@@ -40,17 +42,15 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: rgba($color: c.$clr-primary, $alpha: .8);
+  background-color: rgba($color: c.$clr-primary, $alpha: 0.8);
   &:hover {
     background-color: rgba($color: c.$clr-primary, $alpha: 1);
-
   }
 }
 ::-webkit-scrollbar-track {
-  background-color: rgba($color: c.$clr-secondry, $alpha: .4);
+  background-color: rgba($color: c.$clr-secondry, $alpha: 0.4);
   margin-block: 5px;
 }
-
 
 /*==================================*/
 
