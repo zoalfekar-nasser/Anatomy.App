@@ -1,0 +1,54 @@
+@use "../helpers/variables" as v;
+%landing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  row-gap: 3rem;
+  @media (v.$max-small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+%platform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem 6rem;
+  @media (v.$max-medium) {
+    grid-template-columns: 1fr;
+  }
+}
+
+%cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+%content2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  @media (v.$max-large) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+%sujects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  row-gap: 3rem;
+  @media (v.$max-large) {
+    grid-template-columns: 1fr;
+  }
+}
+
+%footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 6rem;
+  @media (v.$max-large) {
+    grid-template-columns: 1fr;
+  }
+}

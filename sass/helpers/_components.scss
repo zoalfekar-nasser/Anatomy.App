@@ -1,0 +1,50 @@
+@use "variables" as v;
+@use "colors" as c;
+@use "mixins" as m;
+.button {
+  position: relative;
+  margin-top: 6rem;
+  width: 275px;
+  aspect-ratio: 6 / 1;
+  @include m.flex(center, center);
+  color: c.$clr-balckText;
+  background-color: c.$clr-secondry;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform v.$transition, background v.$transition;
+  user-select: none;
+  
+  &:hover {
+    transform: scale(1.04);
+  }
+  &:active {
+    background-color: #f6ae2f;
+  }
+  i {
+    position: absolute;
+    font-size: 12px;
+    right: 1rem;
+  }
+  @media (v.$max-small) {
+    .button {
+      margin: 3rem auto 0;
+    }
+  }
+}
+.logo {
+  @include m.flex(center, center) {
+    gap: 10px;
+  }
+  img {
+    width: 45px;
+  }
+  .logo-text {
+    color: c.$clr-whiteText;
+  }
+}
+
+%footer-Sheading {
+  color: c.$clr-whiteText;
+  font-size: 1rem;
+}

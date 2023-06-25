@@ -1,0 +1,96 @@
+@use "colors" as c;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  @media (max-width: 576px) {
+    outline-offset: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+input {
+  all: unset;
+  display: block;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*==================================*/
+//Scroll Bar
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba($color: c.$clr-primary, $alpha: .8);
+  &:hover {
+    background-color: rgba($color: c.$clr-primary, $alpha: 1);
+
+  }
+}
+::-webkit-scrollbar-track {
+  background-color: rgba($color: c.$clr-secondry, $alpha: .4);
+  margin-block: 5px;
+}
+
+
+/*==================================*/
+
+/*==================================*/
+/* contianer styles : */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+/* Medium */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+/* Large */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+/* X-Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* XX-Large */
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+/*====================================*/
